@@ -1,0 +1,53 @@
+﻿@model SchoolSystem.Models.Lecturer
+
+<div class="row no-margin-padding">
+    <div class="col-md-6">
+        <h3 class="block-title">Lecturer Details</h3>
+    </div>
+    
+</div>
+    <!-- Main Content -->
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- Widget Item -->
+            <div class="col-md-12">
+                <div class="widget-area-2 proclinic-box-shadow">
+                    <h3 class="widget-title">Lecturer Details</h3>
+                    <div class="row no-mp">
+                        <div class="col-md-4">
+                            
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <tbody>
+                                <tr>
+                                    <td><strong>Date Of Birth</strong> </td>
+                                    <td>@Model.LecturerName</td>
+                                </tr>
+                                        <tr>
+                                            <td><strong>Phone</strong> </td>
+                                            <td>@Model.PhoneNumber</td>
+                                        </tr>
+                                       
+                                        <tr>
+                                            <td><strong>Email</strong></td>
+                                            <td>@Model.Email </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                         <a title="Back" asp-action="Index"  class="btn btn-primary " style="padding:3px; margin : 7px; "><span class="ti-angle-left " style="font-size:15px;   "></span> GO BACK</a>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- /Widget Item -->
+
+        </div>
+    </div>

@@ -1,0 +1,65 @@
+﻿@model SchoolSystem.ViewModel.Accounts.LoginVM
+ 
+
+<div style="margin-top:70px;" >
+    <!-- Page Content  -->
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 auth-box">
+                    <div class="proclinic-box-shadow">
+                        <h3 class="widget-title">Login</h3>
+                        @if (ViewBag.PasswordChanged == "yes")
+                        {
+
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Successfully Done!</strong> You have sucessfully changed your password.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                        }
+                        <form asp-action="Login" class="widget-form" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <!-- form-group -->
+                            <div class="form-group row">
+                                <div class="col-sm-12 d-flex gap-3">
+
+                                    <label asp-for="Email" class="col-md-3"></label>
+                                    <input asp-for="Email" placeholder="Email" class="form-control col-md-3">
+                                    <span asp-validation-for="Email" class="text-danger col-md-3"></span>
+
+                                </div>
+                            </div>
+                            <!-- /.form-group -->
+                            <!-- form-group -->
+                            <div class="form-group row my-2">
+                                <div class="col-sm-12 d-flex gap-3">
+
+                                    <label asp-for="Password" class="col-md-3"></label>
+                                    <input asp-for="Password" type="password" placeholder="Password" class="form-control col-md-3">
+                                    <span asp-validation-for="Password" class="text-danger col-md-3"></span>
+
+
+                                </div>
+                            </div>
+                            <div class="button-btn-block my-3">
+                                <button type="submit" class="btn btn-primary text-center ">Login</button>
+                            </div>
+                            <!-- /Login Button -->
+                            <!-- Links -->
+                            <div class="auth-footer-text">
+                                <small>
+                                    Are you a New User? ,
+                                    <a asp-area="" asp-controller="Account" asp-action="Register">Sign Up</a> Here
+                                </small>
+                            </div>
+                            <!-- /Links -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Content  -->
+</div>

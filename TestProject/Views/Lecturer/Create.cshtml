@@ -1,0 +1,54 @@
+﻿@model SchoolSystem.ViewModel.Lecturers.CreateLecturerVM
+
+
+
+
+<!-- Breadcrumb -->
+<!-- Page Title -->
+</div>
+<!-- /Page Title -->
+<!-- /Breadcrumb -->
+<!-- Main Content -->
+<div class="container-fluid">
+
+    <div class="row">
+        <!-- Widget Item -->
+        <div class="col-md-12">
+            <div class="widget-area-2 proclinic-box-shadow">
+                <h3 class="widget-title">Create Lecturer</h3>
+                <form asp-action="Create" method="Post" enctype="multipart/form-data" >
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label asp-for="LecturerName"></label>
+                            <input asp-for="LecturerName" placeholder="Name" class="form-control">
+                            <span asp-validation-for="LecturerName" class="text-danger"></span>
+                        </div>
+                       
+                 
+            
+                        <div class="form-group col-md-6">
+                            <label asp-for="PhoneNumber"></label>
+                            <input asp-for="PhoneNumber" placeholder="Phone" class="form-control">
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" placeholder="email" class="form-control">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                       
+                        
+
+                        <div class="form-group col-md-6 mt-3 mb-3">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <!-- /Widget Item -->
+    </div>
+</div>
+<!-- /Main Content -->

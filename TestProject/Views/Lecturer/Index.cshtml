@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SchoolSystem.ViewModel.Lecturers.LecturerVM>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lecturers List</title>
+</head>
+<body>
+    <h3>Lecturers List</h3>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Lecturer" asp-action="Create">Add Lecturers</a>
+        </div>
+    }
+
+    @if (Model != null && Model.Any())
+    {
+        <table id="tableId" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>PhoneNumber</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var lecturer in Model)
+                {
+                    <tr>
+                        <td>@lecturer.Id</td>
+                        <td>@lecturer.LecturerName</td>
+                        <td>@lecturer.PhoneNumber</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No lecturers available.</p>
+    }
+</body>
+</html>

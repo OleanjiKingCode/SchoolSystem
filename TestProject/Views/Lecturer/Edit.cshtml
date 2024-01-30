@@ -1,0 +1,83 @@
+﻿@model SchoolSystem.ViewModel.Lecturers.UpdateVM
+
+
+
+
+<!-- Breadcrumb -->
+<!-- Page Title -->
+<div class="row no-margin-padding">
+    <div class="col-md-6">
+        <h3 class="block-title">Edit Lecturer</h3>
+    </div>
+    
+</div>
+<!-- /Page Title -->
+<!-- /Breadcrumb -->
+<!-- Main Content -->
+<div class="container-fluid">
+
+    <div class="row">
+        <!-- Widget Item -->
+        <div class="col-md-12">
+            <div class="widget-area-2 proclinic-box-shadow">
+                <h3 class="widget-title">Edit Lecturer</h3>
+                <form asp-action="Edit" method="Post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="hidden" asp-for="Id" />
+                            <label asp-for="LecturerName"></label>
+                            <input asp-for="LecturerName" placeholder="Name" class="form-control" readonly="@(true)">
+                            <span asp-validation-for="LecturerName" class="text-danger"></span>
+                        </div>
+                       
+                     
+
+                        <div class="form-group col-md-6">
+                            <input type="hidden" asp-for="Id" />
+                            <label asp-for="PhoneNumber"></label>
+                            <input asp-for="PhoneNumber" placeholder="Phone" class="form-control">
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="hidden" asp-for="Id" />
+                            <label asp-for="Email"></label>
+                            <input asp-for="Email" placeholder="email" class="form-control">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                 
+                       
+                      
+
+
+                        
+
+                        <div class="form-group col-md-6 mb-3">
+                            <button type="submit" class="btn btn-success btn-lg">Update</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <!-- /Widget Item -->
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $(".custom-file-input").on("change", function () {
+                var FileName = $(this).val().split("\\").pop();
+                $(this).next('.custom-file-label').html.FileName
+
+            });
+
+    </script>
+<script>
+            $('select.disabled option:not(:selected)').attr("disabled", "true");
+</script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
